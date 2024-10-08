@@ -62,8 +62,22 @@ body {
     border-radius: 6px;
 }
 
-@media (max-width:375px) {
+@media (max-width:500px) {
     .container {
         padding: 20px;
+        flex-grow: 1;
+        margin: 15px;
+    }
+    .contact-list {
+        font-size: 17px;
+    }
+    .container p {
+        font-size: 14px;
+    }
+    .container h1 {
+        font-size: 24px;
+    }
+    .hero-image img {
+        width: 75px;
     }
 }
