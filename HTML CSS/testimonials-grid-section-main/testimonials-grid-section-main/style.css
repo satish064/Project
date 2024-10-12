@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 13px;
+  background-color: rgb(237, 242, 248);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  --mainFontColor:hsl(210, 46%, 95%);
+  --mainFontColorOpacity50:hsla(210, 46%, 95%,50%);
+  --mainFontColorOpacity70:hsla(210, 46%, 95%,70%);
+  --darkFontColor:rgb(77, 84, 97);
+  --darkFontColor50:rgba(77, 84, 97,0.5);
+  --darkFontColor70:rgba(77, 84, 97,0.7);
+
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  min-height: 100vh;
+  margin-inline: auto;
+}
+
+.name p {
+  font-weight: 500;
+}
+
+.grid-container {
+  display: grid;
+  margin: 4rem 1.5rem;
+  gap: 2rem;
+}
+
+.quotation {
+  position: absolute;
+  right: 33px;
+  top: 0;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  color: var(--mainFontColor);
+}
+
+.intro {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+.intro .img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.intro .img img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.heading {
+  z-index: 1;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.text {
+  font-weight: 500;
+}
+
+.box-1 {
+  position: relative;
+  background-color: rgb(115, 63, 200);
+}
+
+.box-2 {
+  background-color: rgb(73, 85, 107);
+}
+
+.box-3 {
+  background-color: rgb(255, 255, 255);
+  color: var(--darkFontColor);
+}
+
+.box-4 {
+  background-color: rgb(24, 32, 45);
+}
+
+.box-5 {
+  background-color: rgb(255, 255, 255);
+  color: var(--darkFontColor);
+}
+
+.box-1 .name p , .box-2 .name p , .box-4 .name p {
+  color:var(--mainFontColorOpacity50)
+}
+
+.box-5 .name p , .box-3 .name p {
+  color: var(--darkFontColor50);
+}
+
+.text {
+  color: var(--mainFontColorOpacity70);
+  line-height: 20px;
+}
+
+.box-5 .text , .box-3 .text {
+  color: var(--darkFontColor70);
+}
+
+@media (min-width: 800px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 5rem 2rem;
+  }
+
+  .box-1,
+  .box-4 {
+    grid-column-start: span 2;
+  }
+
+  .box-5 {
+    grid-row-start: span 2;
+    grid-column-start: 4;
+    grid-row-end: 2;
+  }
+}
