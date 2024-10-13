@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    font-family: "poppins", sans-serif;
+    font-size: 15px;
+    background-color: rgb(250, 250, 250);
+    margin: 4rem 8rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+}
+
+header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+header p{
+    margin-top: 1rem;
+}
+
+header p {
+    color: rgb(177, 176, 178);
+}
+
+h2 {
+    font-weight: 600;
+}
+
+header h1 {
+    font-weight: 200;
+}
+
+header h2 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    'supervisor'
+    'team-builder'
+    'karma'
+    'calculator';
+    gap: 2.5rem;
+    margin-top: 5rem;
+}
+
+.container section {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 2rem;
+    gap: 10px;
+}
+
+section img {
+    margin-top: 1rem;
+    width: 50px;
+    align-self: flex-end;
+}
+
+section p {
+    color: rgb(198, 198, 200);
+}
+
+section {
+    transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.supervisor {
+    grid-area: supervisor;
+    border-radius: 8px;
+    border-top: 5px solid hsl(180, 62%, 55%);
+}
+
+.team-builder {
+    grid-area: team-builder;
+    border-radius: 8px;
+    border-top: 5px solid hsl(0, 78%, 62%);
+}
+
+.karma {
+    grid-area: karma;
+    border-radius: 8px;
+    border-top: 5px solid hsl(34, 97%, 64%);
+}
+
+.calculator {
+    grid-area:calculator;
+    border-radius: 8px;
+    border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+footer {
+    margin-top: 3rem;
+}
+
+
+@media(max-width:800px) {
+    body{
+        margin: 3rem 1.5rem;
+    }
+    header h2 , header h1 {
+        font-size: 25px;
+    }
+    .container {
+        margin-top: 4rem;
+    }
+}
+
+@media(min-width:800px) {
+
+    body {
+        max-width: 1200px;
+    }
+
+    .container {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-areas: 
+        '. team-builder .'
+        'supervisor team-builder calculator'
+        'supervisor karma calculator'
+        '. karma .';
+    }
+
+    header p {
+        margin-inline: 21rem;
+    }
+}
