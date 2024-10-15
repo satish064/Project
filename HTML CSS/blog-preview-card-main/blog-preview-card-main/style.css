@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(245, 208, 78);
+    font-family: "Figtree",sans-serif;
+}
+
+.container {
+    margin-inline: 1.5rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 10px 10px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.learning { 
+    background-color: rgb(245, 208, 78);
+    padding: 10px 15px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.learning .date {
+    color:  hsl(0, 0%, 7%);
+}
+
+.learning h6 {
+    font-weight: 800;
+    font-size: 14px;
+}
+
+
+.card .grey-text {
+  font-weight: 500;
+  max-width: 340px;
+  color: hsl(0, 0%, 42%);
+  margin-bottom: 20px;
+}
+
+.card h1 {
+    font-weight: 800;
+    font-size: 25px;
+    margin-block: 16px;
+}
+
+.card h1:hover {
+    cursor: pointer;
+    color: rgb(245, 208, 78);
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.creator-img {
+    width: 40px;
+}
+
+.creator h5 {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+@media(max-width:400px) {
+    .card h1 {
+        font-size: 22px;
+    }
+}
