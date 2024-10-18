@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Overpass" , sans-serif;
+    background-color:hsl(216, 12%, 8%) ;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: rgb(32, 39, 49);
+    max-width: 25rem;
+    padding: 1.875rem;
+    border-radius: 32px;
+}
+
+.star {
+    display: flex;
+    background-color: rgb(39, 46, 56);
+    width: 2.8125rem;
+    height: 2.8125rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem
+}
+
+.heading {
+    color: #fff;
+}
+
+.text {
+    font-size: 0.9375rem;
+    color: hsl(217, 12%, 63%);
+    margin-block: 1.5rem;
+}
+
+.rating-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+span {
+    color: hsl(217, 12%, 63%);
+    background-color: rgb(38, 46, 56);
+    font-size: 1.25rem;
+    height: 3.125rem;
+    width: 3.125rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: span 1s ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+span:hover {
+    cursor: pointer;
+    background-color: rgb(252, 118, 19);
+    color: black;
+}
+
+.selected {
+    background-color: white;
+    color: black;
+}
+
+button {
+    all: unset;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    background-color: rgb(252, 118, 19);
+    display: inline-block;
+    width: 100%;
+    padding-block: 0.9375rem;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 2.1875rem;
+    margin-top: 1.9375rem;
+    letter-spacing: 0.3125rem;
+    transition: button 1s ease-in-out;
+}
+
+a {
+    color: black;
+}
+
+/* Thank-you-conatiner */
+
+.thank-you-container {
+    background-color: rgb(32, 39, 49);
+    max-width: 25rem;
+    padding: 1.875rem;
+    border-radius: 32px;
+    text-align: center;
+    display: none;
+}
+
+.thankyou-image {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: white;
+}
+
+.orange-text {
+    color:rgb(252, 118, 19);
+    margin-block: 2rem;
+    border-radius: 1.875rem;
+    padding: 0.625rem 1.25rem;
+    display: inline-block;
+    color: rgb(252, 118, 19);
+    background-color: rgb(38, 46, 56);
+}
+
+@media(max-width:31.25rem) {
+    .container , .thank-you-container {
+        border-radius: 0.8125rem;
+        margin-inline: 1.5rem;
+    }
+}

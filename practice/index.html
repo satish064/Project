@@ -9,91 +9,76 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
+      href="./images/favicon-32x32.png"
     />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <title>Frontend Mentor | Interactive rating component</title>
 
-    <title>Frontend Mentor | Bento grid</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
-      <section aria-label="bento grid" class="bento">
-        <div class="bento-item schedule">
-          <h2>
-            Create and schedule content
-            <em class="text--purple">quicker</em>.
-          </h2>
-          <img
-            src="./assets/images/illustration-create-post.webp"
-            alt="picture of a button being clicked with a mouse cursor; button says create post"
-          />
-        </div>
-        <div class="bento-item social">
-          <h2>
-            Social Media <span class="text--yellow">10x</span>
-            <em>Faster</em> with Al
-          </h2>
-          <img
-            src="./assets/images/illustration-five-stars.webp"
-            alt="5 stars"
-            width="300"
-          />
-          <p>Over 4,000 5-star reviews</p>
-        </div>
-        <div class="bento-item timing">
-          <h2>Schedule to social media</h2>
-          <div class="img-wrapper">
-            <img
-              src="./assets/images/illustration-schedule-posts.webp"
-              alt="5 stars"
-              width="300"
-            />
-          </div>
-          <p>
-            Optimize post timings to publish content at the perfect time for
-            your audience.
-          </p>
-        </div>
-        <div class="bento-item content">
-          <h2>Write your content using Al.</h2>
-          <img
-            src="./assets/images/illustration-ai-content.webp"
-            alt='A chat interface with two speech bubbles. The first bubble says, "Give me 5 tips to growth my follower on Insta!" with an avatar icon next to it. The second bubble responds, "Certainly! Here are five tips to help you grow your Instagram..." An upward arrow icon overlaps the image.'
-          />
-        </div>
-        <div class="bento-item multiple">
-          <div class="img-wrapper">
-            <img
-              src="./assets/images/illustration-multiple-platforms.webp"
-              alt="social media handles for twitter and instagram"
-            />
-          </div>
-          <h2>Manage multiple accounts and platforms.</h2>
-        </div>
-        <div class="bento-item growth">
-          <p class="large">>56%</p>
-          <h2>faster audience growth</h2>
-          <img src="./assets/images/illustration-audience-growth.webp" alt="" />
-        </div>
-        <div class="bento-item consistency">
-          <h2>Maintain a consistent posting schedule</h2>
-          <img
-            src="./assets/images/illustration-consistent-schedule.webp"
-            alt=""
-          />
-        </div>
-        <div class="bento-item followers">
-          <img src="./assets/images/illustration-grow-followers.webp" alt="" />
-          <h2>Grow followers with non-stop content.</h2>
-        </div>
-      </section>
-    </main>
+    <p class="disclaimer">
+      This demo is a bit different from the one we build in the YouTube video.
+      However the functionality is still the same and you should be able to
+      follow along.
+    </p>
+    <!-- Rating state start -->
+    <div class="container">
+      <img src="./images/icon-star.svg" alt="" />
+      <h1>How did we do?</h1>
+
+      <p>
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
+
+      <ul>
+        <li><button class="btn">1</button></li>
+        <li><button class="btn">2</button></li>
+        <li><button class="btn">3</button></li>
+        <li><button class="btn">4</button></li>
+        <li><button class="btn">5</button></li>
+      </ul>
+
+      <button class="btn-submit" id="submit-rating">Submit</button>
+    </div>
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+    <div class="thank-you hidden">
+      <img src="./images/illustration-thank-you.svg" alt="" />
+      <p class="gray">
+        You selected
+        <span id="rating" style="display: inline-block; margin: 0 0.3rem"
+          >1</span
+        >
+        out of 5
+      </p>
+
+      <h2>Thank you!</h2>
+
+      <p>
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don’t hesitate to get in touch!
+      </p>
+
+      <button class="btn-submit" id="rate-again">Rate Again</button>
+    </div>
+    <!-- Thank you state end -->
+
+    <div class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noreferrer"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://tsbsankara.netlify.app" target="_blank" rel="noreferrer"
+        >Thomas Sankara</a
+      >.
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

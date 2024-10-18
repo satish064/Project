@@ -1,16 +1,22 @@
-const hamburgerMenuIcon = document.querySelector('.close-icon')
-const header = document.querySelector('.header-content ')
-const hamburgerMenuContainer = document.querySelector('.hamburger-menu-container')
+const mainContainer = document.querySelector(".container")
+const thanksContainer = document.querySelector(".thank-you")
+const submitButton = document.getElementById("submit-rating")
+const rateAgain = document.getElementById("rate-again")
+const ratings = document.querySelectorAll(".btn")
+const actualRating = document.getElementById("rating")
 
-hamburgerMenuContainer.addEventListener('click' , (e) => {
-    e.stopPropagation()
-    header.classList.add('menu-open') 
+submitButton.addEventListener("click", () => {
+  mainContainer.style.display = "none"
+  thanksContainer.classList.remove("hidden")
+
+  ratings.forEach((rating) => {
+    rating.addEventListener("click", () => {
+      actualRating.innerHTML = rating.innerHTML
+    })
+  })
 })
 
-hamburgerMenuIcon.addEventListener('click' , () => {
-    header.classList.remove('menu-open') 
-})
-
-window.addEventListener('click' , () => {
-    header.classList.remove('menu-open') 
+rateAgain.addEventListener("click", () => {
+  mainContainer.style.display = "block"
+  thanksContainer.classList.add("hidden")
 })
