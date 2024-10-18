@@ -1,22 +1,27 @@
-const mainContainer = document.querySelector(".container")
-const thanksContainer = document.querySelector(".thank-you")
-const submitButton = document.getElementById("submit-rating")
-const rateAgain = document.getElementById("rate-again")
-const ratings = document.querySelectorAll(".btn")
-const actualRating = document.getElementById("rating")
+let input = document.getElementById('inputBox');
+let buttons = document.querySelectorAll('button');
 
-submitButton.addEventListener("click", () => {
-  mainContainer.style.display = "none"
-  thanksContainer.classList.remove("hidden")
+let string = "";
+let arr = Array.from(buttons);
+arr.forEach(button => {
+    button.addEventListener('click', (e) =>{
+        if(e.target.innerHTML == '='){
+            string = eval(string);
+            input.value = string;
+        }
 
-  ratings.forEach((rating) => {
-    rating.addEventListener("click", () => {
-      actualRating.innerHTML = rating.innerHTML
+        else if(e.target.innerHTML == 'AC'){
+            string = "";
+            input.value = string;
+        }
+        else if(e.target.innerHTML == 'DEL'){
+            string = string.substring(0, string.length-1);
+            input.value = string;
+        }
+        else{
+            string += e.target.innerHTML;
+            input.value = string;
+        }
+        
     })
-  })
-})
-
-rateAgain.addEventListener("click", () => {
-  mainContainer.style.display = "block"
-  thanksContainer.classList.add("hidden")
 })
