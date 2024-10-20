@@ -29,6 +29,7 @@ function check() {
         alert("Not Today!")
     }
 
+    inputValue.value = ""
 }
 
 
