@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #000;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.card-container {
+    width: 400px;
+    height: min-content;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 28px;
+    margin-inline: 1.5rem;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-container button {
+    flex-shrink: 0;
+}
+
+.weather-body {
+    display: none;
+}
+
+.input-box {
+    width: 84%;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #000;
+    background-color: #e6f5fb;
+    padding: 12px 16px;
+    border-radius: 14px;
+}
+
+.input-btn {
+    width: 46px;
+    height: 46px;
+    background-color: #e6f5fb;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.input-box::placeholder {
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.weather-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.weather-box img {
+    width: 60%;
+}
+
+.weather-box .temperature-text {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.temperature {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.temperature sup {
+    font-size: 20px;
+    font-weight: 600;
+    position: absolute;
+}
+
+.about-weather {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wind-speed , .humidity {
+    display: flex;
+    align-items: center;
+}
+
+.wind-speed i , .humidity i{
+    font-size: 36px;
+}
+
+.text {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.text span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.location-not-find {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.location-not-find h1 {
+    font-size: 20px;
+    color: #6b6b6b;
+    margin-block: 15px;
+}
+
+.location-not-find img {
+    width: 85%;
+}
+
+@media(max-width:600px) {
+    .wind-text {
+        margin-right: 0;
+    }
+}
