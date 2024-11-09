@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca:100,200,300,regular,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Display:100,200,300,regular,500,600,700,800,900');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --paragraph: hsl(0deg 0% 100% / 50%);
+    --background-color:hsl(0, 0%, 95%);
+    --heading-color:hsl(0, 0%, 95%);
+    --button-color:hsl(0, 0%, 95%);
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+    font-family: 'Big Shoulders Display' , 'Lexend Deca' , sans-serif;
+}
+
+.cars-container {
+    display: flex;
+    max-width: 1000px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+section {
+    padding: 50px;
+}
+
+.car-icon {
+    margin-bottom: 45px;
+}
+
+h1 {
+    color: var(--heading-color);
+    text-transform: uppercase;
+    font-size: 48px;
+    margin-bottom: 45px;
+}
+
+p {
+    font-family: 'Lexend Deca';
+    color: var(--paragraph);
+    line-height: 1.6;
+    margin-bottom: 90px;
+    font-weight: 500;
+}
+
+.learn-more {
+    all: unset;
+    background-color: var(--button-color);
+    padding: 20px 40px;
+    border-radius: 53px;
+    font-weight: 600;
+    font-family: 'Lexend Deca';
+}
+
+.sedans {
+    background-color: var(--Bright-orange);
+}
+
+.sedans .learn-more {
+    color:  var(--Bright-orange);
+}
+
+
+.suvs {
+    background-color: var(--Dark-cyan);
+}
+
+.suvs .learn-more {
+    color: var(--Dark-cyan);
+}
+
+.luxury {
+    background-color: var(--Very-dark-cyan);
+}
+
+.luxury .learn-more {
+    color: var(--Very-dark-cyan); ;
+}
+
+.learn-more:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--button-color);
+    outline: 2px solid var(--button-color);
+    transition: background-color 0.2s ease-in-out;
+}
+
+
+@media(max-width:600px) {
+    .cars-container {
+        flex-direction: column;
+        margin-inline: 2rem;
+        margin-block: 4rem;
+    }
+    .car-icon {
+        margin-bottom: 20px;
+    }
+    h1 {
+        margin-bottom: 20px;
+    }
+    p{
+        margin-bottom: 40px;
+    }
+}
+
