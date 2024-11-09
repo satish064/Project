@@ -1,8 +1,13 @@
-const sharePopUp = document.querySelector('.share-platform ')
-const shareBtn = document.querySelector('.share')
-const right = document.querySelector('.right')
+const button = document.querySelector('.share-icon')
+const socialLinks = document.querySelector('.social-link')
 
+button.addEventListener('click' , () => {
+    socialLinks.classList.toggle('active')
 
-shareBtn.addEventListener('click', () => {
-    sharePopUp.classList.toggle("show")
+    if(button.classList.contains('share-active')){
+        button.classList.remove('share-active','share-active-img')
+    }
+    else {
+        button.classList.add('share-active','share-active-img')
+    }
 })
